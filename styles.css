@@ -7,16 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(145deg, #1a1a1a, #333);
+    background: #1a1a1a; /* Darker theme */
     color: white;
     line-height: 1.6;
     padding: 0;
     margin: 0;
-}
-
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
 }
 
 /* Hero Section */
@@ -25,14 +20,21 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #0061f2, #00d4ff);
+    background: linear-gradient(135deg, #ff4e00, #ff6a00); /* New vibrant colors */
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .hero-content {
     max-width: 700px;
     color: #fff;
+}
+
+.hero .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    animation: spinLogo 3s infinite ease-in-out; /* Logo animation */
 }
 
 .hero h1 {
@@ -49,7 +51,7 @@ h1, h2, h3 {
 
 .cta-button {
     text-decoration: none;
-    background-color: #00d4ff;
+    background-color: #ff6a00;
     color: #1a1a1a;
     padding: 15px 30px;
     font-size: 1.1rem;
@@ -59,7 +61,7 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-    background-color: #0061f2;
+    background-color: #ff4e00;
     color: white;
 }
 
@@ -72,11 +74,23 @@ h1, h2, h3 {
     }
 }
 
+@keyframes spinLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Features Section */
 .features {
     padding: 50px 20px;
     text-align: center;
-    background-color: #1c1c1c;
+    background-color: #2c2c2c;
 }
 
 .features h2 {
@@ -130,7 +144,7 @@ h1, h2, h3 {
 }
 
 footer {
-    background-color: #1c1c1c;
+    background-color: #2c2c2c;
     text-align: center;
     padding: 20px;
     color: #ccc;
