@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Floating Bubbles -->
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>🎬 Make Catchy Videos in Seconds</h1>
       <p>AI that edits, titles, and cuts — so you go viral faster.</p>
-      <a href="#cta" class="cta-button click-sound">Try Hypecut Now</a>
+      <a href="#cta" class="cta-button">Try Hypecut Now</a>
     </div>
   </section>
 
@@ -39,23 +45,12 @@
   <section id="cta" class="cta">
     <h2>⚡ Get Noticed. Get Clicks. Get Hypecut.</h2>
     <p>Join thousands of creators making better content in half the time.</p>
-    <a href="#" class="cta-button click-sound">Join the Waitlist</a>
+    <a href="#" class="cta-button">Join the Waitlist</a>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
   </footer>
-
-  <!-- Button Click Sound Script -->
-  <script>
-    const clickSound = new Audio('click.mp3');
-    document.querySelectorAll('.click-sound').forEach(btn => {
-      btn.addEventListener('click', () => {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      });
-    });
-  </script>
 </body>
 </html>
