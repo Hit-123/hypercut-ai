@@ -1,125 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hypecut AI – Make Content 10x Faster</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypecut AI - Revolutionizing Creativity</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Loading Spinner -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Floating Bubbles Background -->
-  <div class="bubbles-bg">
-    <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
-  </div>
-
-  <!-- Main Content -->
-  <div id="main-content" style="display:none;">
-
-    <!-- Header with Logo -->
-    <header class="site-header">
-      <div class="container header-flex">
-        <div class="logo-container">
-          <img src="hypecut-logo.png" alt="Hypecut Logo" class="site-logo" />
-        </div>
-      </div>
-    </header>
-
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <h1><span class="typed"></span></h1>
-        <p>Use AI-powered tools to create catchy titles, smart edits, and video ideas in seconds.</p>
-        <a href="#cta" class="cta-btn">Try Hypecut AI Free</a>
-      </div>
+        <div class="hero-content">
+            <h1>⚡ Hypecut AI</h1>
+            <p>Where speed meets creativity. Instantly generate, edit, and create with the power of AI.</p>
+            <a href="#cta" class="cta-button">Get Started</a>
+        </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
-      <div class="container">
-        <h2>Why Creators Love Hypecut</h2>
-        <div class="feature-grid">
-          <div class="feature">
-            <h3>💡 Smart Ideas</h3>
-            <p>Never run out of content ideas. Get viral hooks, intros & edits instantly.</p>
-          </div>
-          <div class="feature">
-            <h3>⚡ Fast & Simple</h3>
-            <p>Create content-ready material in under 60 seconds using AI magic.</p>
-          </div>
-          <div class="feature">
-            <h3>📈 Grow Faster</h3>
-            <p>Stand out with scroll-stopping headlines and visuals made for virality.</p>
-          </div>
+        <h2>🚀 Why Hypecut?</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>⚡ Instant Editing</h3>
+                <p>Generate fast, smart cuts and edits for your videos or audio in seconds.</p>
+            </div>
+            <div class="card">
+                <h3>🎯 Smart Suggestions</h3>
+                <p>Our AI detects key moments and boosts your creative workflow.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Customizable Output</h3>
+                <p>Choose your own style. Hypecut adapts to YOU, not the other way around.</p>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Call to Action -->
-    <section id="cta" class="cta-section">
-      <div class="container">
-        <h2>Start Free – No Sign Up Needed</h2>
-        <p>Test Hypecut now and create your first viral short in 60 seconds.</p>
-        <a href="#" class="cta-btn">Start Now</a>
-      </div>
+    <section id="cta" class="cta">
+        <h2>Ready to Make the Cut?</h2>
+        <p>Join 10,000+ creators already ahead of the game with Hypecut AI.</p>
+        <a href="#" class="cta-button">Join the Waitlist</a>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>Made with ❤️ by you | &copy; 2025 Hypecut AI</p>
+        <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
     </footer>
-
-  </div>
-
-  <!-- ScrollReveal & Typing Script -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    // Loader
-    window.addEventListener('load', () => {
-      document.getElementById('loader').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    });
-
-    // ScrollReveal animations
-    ScrollReveal().reveal('.hero-content h1', { delay: 200, distance: '40px', origin: 'top' });
-    ScrollReveal().reveal('.hero-content p', { delay: 400, distance: '30px', origin: 'bottom' });
-    ScrollReveal().reveal('.cta-btn', { delay: 600, scale: 0.9 });
-
-    ScrollReveal().reveal('.features h2', { delay: 300 });
-    ScrollReveal().reveal('.feature', { interval: 200 });
-
-    ScrollReveal().reveal('.cta-section', { delay: 400, distance: '50px', origin: 'bottom' });
-
-    // Typing effect
-    const phrases = [
-      "Make Viral Content 10x Faster",
-      "Create Catchy Titles Instantly",
-      "Auto-Edit Videos in Seconds"
-    ];
-    let idx = 0, char = 0;
-    const typedEl = document.querySelector('.typed');
-    function type() {
-      if (char < phrases[idx].length) {
-        typedEl.textContent += phrases[idx].charAt(char++);
-        setTimeout(type, 100);
-      } else {
-        setTimeout(() => {
-          typedEl.textContent = '';
-          char = 0;
-          idx = (idx + 1) % phrases.length;
-          type();
-        }, 2000);
-      }
-    }
-    document.addEventListener('DOMContentLoaded', type);
-  </script>
 </body>
 </html>
