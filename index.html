@@ -2,134 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hypecut AI - Revolutionizing Creativity</title>
-  <style>
-    /* Reset */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Poppins',sans-serif; background:#111; color:#fff; }
-    a { text-decoration:none; }
-
-    /* Hero Section */
-    .hero {
-      position:relative;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      overflow:hidden;
-    }
-    .hero-overlay {
-      position:absolute;
-      top:0; left:0;
-      width:100%; height:100%;
-      background: radial-gradient(circle at top right, #ff4e00, #ff6a00, #111);
-      animation: overlayRotate 20s linear infinite;
-      filter: blur(80px);
-    }
-    .hero-content {
-      position:relative;
-      z-index:2;
-      max-width:700px;
-      padding:20px;
-      backdrop-filter: blur(10px);
-      background: rgba(0,0,0,0.5);
-      border-radius:20px;
-      animation: fadeIn 1.5s ease-out;
-    }
-    .hero-title { font-size:3rem; margin-bottom:1rem; }
-    .hero-title span { color:#ffdd00; }
-    .hero-subtitle { font-size:1.2rem; margin-bottom:2rem; color:#ddd; }
-    .btn { display:inline-block; padding:0.8rem 2rem; border-radius:50px; background:#ffdd00; color:#111; font-weight:600; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-    .btn:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(255,221,0,0.5); }
-
-    /* Animated Shapes */
-    .hero-shapes .shape { position:absolute; border-radius:50%; opacity:0.3; mix-blend-mode:screen; }
-    .shape1 { width:250px; height:250px; background:#00d4ff; top:10%; left:15%; animation: move1 10s ease-in-out infinite; }
-    .shape2 { width:200px; height:200px; background:#8000ff; bottom:20%; right:10%; animation: move2 12s ease-in-out infinite; }
-    .shape3 { width:300px; height:300px; background:#ff006e; top:50%; right:40%; animation: move3 14s ease-in-out infinite; }
-
-    /* Features Section */
-    .features { padding:4rem 2rem; background:#1a1a1a; text-align:center; }
-    .features h2 { font-size:2.5rem; margin-bottom:1.5rem; }
-    .features span { color:#ffdd00; }
-    .feature-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; }
-    .card { background:#222; padding:2rem; border-radius:12px; width:280px; box-shadow:0 5px 15px rgba(0,0,0,0.5); transition:transform 0.3s ease; }
-    .card:hover { transform:translateY(-10px); }
-    .card h3 { margin-bottom:1rem; color:#ffdd00; }
-
-    /* CTA Section */
-    .cta { padding:4rem 2rem; background:#111; text-align:center; }
-    .cta-content h2 { font-size:2.5rem; margin-bottom:1rem; }
-    .cta-content p { margin-bottom:2rem; color:#ccc; }
-
-    /* Footer */
-    footer { padding:1rem; text-align:center; background:#1a1a1a; color:#ccc; }
-    footer p span { color:#ffdd00; }
-
-    /* Keyframes */
-    @keyframes fadeIn { from{opacity:0; transform:scale(0.95);} to{opacity:1; transform:scale(1);} }
-    @keyframes overlayRotate { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
-    @keyframes move1 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(30px,20px);} }
-    @keyframes move2 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(-20px,30px);} }
-    @keyframes move3 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(20px,-30px);} }
-
-    /* Responsive */
-    @media(max-width:768px) {
-      .hero-title { font-size:2.2rem; }
-      .hero-subtitle { font-size:1rem; }
-      .feature-cards { flex-direction:column; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hypecut AI – Make Content 10x Faster</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">Unlock the Future of Creativity with <span>Hypecut AI</span></h1>
-      <p class="hero-subtitle">Revolutionary AI tools that turn your ideas into reality, faster than ever before.</p>
-      <a href="#cta" class="btn cta-button">Get Started</a>
-    </div>
-    <div class="hero-shapes">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      <div class="shape shape3"></div>
-    </div>
-  </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Why <span>Hypecut AI</span>?</h2>
-    <div class="feature-cards">
-      <div class="card">
-        <h3>Instant Results</h3>
-        <p>Our AI works in real-time to bring your concepts to life instantly.</p>
-      </div>
-      <div class="card">
-        <h3>Seamless Integration</h3>
-        <p>Integrates effortlessly into your workflow for maximum productivity.</p>
-      </div>
-      <div class="card">
-        <h3>Advanced Technology</h3>
-        <p>Powered by cutting-edge AI technologies to push boundaries.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Loading Spinner -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
-  <!-- Call-to-Action Section -->
-  <section id="cta" class="cta">
-    <div class="cta-content">
-      <h2>Ready to Take the Leap?</h2>
-      <p>Join thousands of users unlocking their potential with <span>Hypecut AI</span>.</p>
-      <a href="#" class="btn cta-button">Join the Waitlist</a>
-    </div>
-  </section>
+  <!-- Floating Bubbles Background -->
+  <div class="bubbles-bg">
+    <div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div>
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 <span>Hypecut AI</span>. All rights reserved.</p>
-  </footer>
+  <!-- Main Content -->
+  <div id="main-content" style="display:none;">
+
+    <!-- Header with Logo -->
+    <header class="site-header">
+      <div class="container header-flex">
+        <div class="logo-container">
+          <img src="hypecut-logo.png" alt="Hypecut Logo" class="site-logo" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1><span class="typed"></span></h1>
+        <p>Use AI-powered tools to create catchy titles, smart edits, and video ideas in seconds.</p>
+        <a href="#cta" class="cta-btn">Try Hypecut AI Free</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Why Creators Love Hypecut</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <h3>💡 Smart Ideas</h3>
+            <p>Never run out of content ideas. Get viral hooks, intros & edits instantly.</p>
+          </div>
+          <div class="feature">
+            <h3>⚡ Fast & Simple</h3>
+            <p>Create content-ready material in under 60 seconds using AI magic.</p>
+          </div>
+          <div class="feature">
+            <h3>📈 Grow Faster</h3>
+            <p>Stand out with scroll-stopping headlines and visuals made for virality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <h2>Start Free – No Sign Up Needed</h2>
+        <p>Test Hypecut now and create your first viral short in 60 seconds.</p>
+        <a href="#" class="cta-btn">Start Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ by you | &copy; 2025 Hypecut AI</p>
+    </footer>
+
+  </div>
+
+  <!-- ScrollReveal & Typing Script -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    });
+
+    // ScrollReveal animations
+    ScrollReveal().reveal('.hero-content h1', { delay: 200, distance: '40px', origin: 'top' });
+    ScrollReveal().reveal('.hero-content p', { delay: 400, distance: '30px', origin: 'bottom' });
+    ScrollReveal().reveal('.cta-btn', { delay: 600, scale: 0.9 });
+
+    ScrollReveal().reveal('.features h2', { delay: 300 });
+    ScrollReveal().reveal('.feature', { interval: 200 });
+
+    ScrollReveal().reveal('.cta-section', { delay: 400, distance: '50px', origin: 'bottom' });
+
+    // Typing effect
+    const phrases = [
+      "Make Viral Content 10x Faster",
+      "Create Catchy Titles Instantly",
+      "Auto-Edit Videos in Seconds"
+    ];
+    let idx = 0, char = 0;
+    const typedEl = document.querySelector('.typed');
+    function type() {
+      if (char < phrases[idx].length) {
+        typedEl.textContent += phrases[idx].charAt(char++);
+        setTimeout(type, 100);
+      } else {
+        setTimeout(() => {
+          typedEl.textContent = '';
+          char = 0;
+          idx = (idx + 1) % phrases.length;
+          type();
+        }, 2000);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', type);
+  </script>
 </body>
 </html>
