@@ -8,14 +8,12 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  background-size: 400% 400%;
-  animation: bgAnimation 15s ease infinite;
+  background-size: 300% 300%;
+  animation: bgAnimation 10s ease infinite;
   color: white;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* Background animation */
 @keyframes bgAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -24,27 +22,11 @@ body {
 
 h1, h2, h3 {
   font-weight: 700;
+  text-shadow: 0 0 10px #000;
 }
 
 p {
   line-height: 1.6;
-}
-
-/* Glowing text effect */
-.glow-text {
-  font-size: 3rem;
-  color: #ff00cc;
-  text-shadow:
-    0 0 10px #ff00cc,
-    0 0 20px #ff00cc,
-    0 0 40px #ff00cc,
-    0 0 80px #ff00cc;
-  animation: glow-pulse 2s infinite alternate;
-}
-
-@keyframes glow-pulse {
-  0% { text-shadow: 0 0 10px #ff00cc; }
-  100% { text-shadow: 0 0 40px #ff00cc; }
 }
 
 /* Hero */
@@ -55,12 +37,17 @@ p {
   height: 100vh;
   text-align: center;
   padding: 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .hero-content {
   max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ff00cc;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px #ff00cc;
 }
 
 .hero p {
@@ -80,6 +67,12 @@ p {
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+}
+
+/* 🆕 Button Active Click Animation */
+.cta-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
 }
 
 .cta-button:hover {
@@ -156,7 +149,6 @@ footer {
   color: #888;
   text-align: center;
   padding: 20px;
-  z-index: 2;
 }
 
 /* Mobile */
@@ -170,55 +162,7 @@ footer {
     width: 90%;
   }
 
-  .glow-text {
-    font-size: 2rem;
+  .hero h1 {
+    font-size: 2.2rem;
   }
-}
-
-/* Bubbles Animation */
-.bubbles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.bubbles span {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: bubbleMove 20s linear infinite;
-  bottom: -150px;
-}
-
-.bubbles span::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-@keyframes bubbleMove {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) scale(0.5);
-    opacity: 0;
-  }
-}
-
-.bubbles span {
-  left: calc(10% * var(--i));
-  animation-duration: calc(10s + var(--i) * 1s);
-  animation-delay: calc(-1s * var(--i));
 }
