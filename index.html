@@ -7,13 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Animated Background Bubbles -->
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Turn Long Videos into Viral Shorts — Instantly.</h1>
+      <h1>🎬 Make Catchy Videos in Seconds</h1>
+      <p>AI that edits, titles, and cuts — so you go viral faster.</p>
+      <a href="#cta" class="cta-button">Try Hypecut Now</a>
+
+      <h2>Turn Long Videos into Viral Shorts — Instantly.</h2>
       <p>HypeCut uses AI to auto-detect viral moments and edits them into high-retention vertical videos.</p>
-      <a href="#cta" class="cta-button">Join Waitlist</a>
-      <a href="#demo" class="cta-button">Try Free Demo</a>
+      <div class="hero-buttons">
+        <a href="#cta" class="cta-button">Join Waitlist</a>
+        <a href="#demo" class="cta-button">Try Free Demo</a>
+      </div>
     </div>
   </section>
 
@@ -42,20 +54,20 @@
     <h2>🔥 Key Features</h2>
     <div class="feature-cards">
       <div class="card">
-        <h3>Auto-Detects Viral Clips</h3>
-        <p>AI that finds the most engaging moments for you.</p>
+        <h3>🧠 Viral Titles & Hooks</h3>
+        <p>Our AI writes powerful titles and intros to boost watch time.</p>
       </div>
       <div class="card">
-        <h3>Adds Trending Music & Captions</h3>
+        <h3>✂️ Auto-Cuts That Slap</h3>
+        <p>No more boring intros. Get fast-paced edits that keep attention.</p>
+      </div>
+      <div class="card">
+        <h3>🎶 Trending Music & Captions</h3>
         <p>Boost engagement with the latest music and text effects.</p>
       </div>
       <div class="card">
-        <h3>Resizes & Formats for Reels/Shorts/TikTok</h3>
-        <p>Get the perfect dimensions for each platform.</p>
-      </div>
-      <div class="card">
-        <h3>One-Click Exports</h3>
-        <p>Download your viral content with ease, ready for social sharing.</p>
+        <h3>📐 Auto-Resizing & Export</h3>
+        <p>Perfect dimensions and one-click exports for all platforms.</p>
       </div>
     </div>
   </section>
@@ -71,9 +83,9 @@
   <section id="cta" class="cta">
     <h2>⚡ Get Early Access</h2>
     <p>Sign up to join the waitlist and be the first to try Hypecut.</p>
-    <form action="your-form-handler" method="POST">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Join Waitlist</button>
+    <form action="your-form-handler" method="POST" class="waitlist-form">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit" class="cta-button">Join Waitlist</button>
     </form>
   </section>
 
