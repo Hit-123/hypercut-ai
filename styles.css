@@ -1,135 +1,158 @@
+/* Reset default margins and padding */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #0e0e10;
-  color: #ffffff;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    color: white;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
-.container {
-  text-align: center;
-  padding: 100px 20px;
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
-  background: radial-gradient(circle, #141419, #0e0e10);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0061f2, #00d4ff);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: #fff;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
-.hero h1 span {
-  color: #00ffcc;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-top: 15px;
-  color: #c5c5c5;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  background: #00ffcc;
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px #00ffcc;
+.cta-button {
+    text-decoration: none;
+    background-color: #00d4ff;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    animation: fadeIn 3s ease-in-out;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00ffcc;
-}
-
-.features {
-  background: #111;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.features ul {
-  list-style: none;
-  margin-bottom: 40px;
-}
-
-.features li {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-.signup-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.signup-form input {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  width: 250px;
-  font-size: 1rem;
-}
-
-.signup-form button {
-  padding: 12px 20px;
-  background: #00ffcc;
-  color: #000;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #0a0a0a;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease forwards;
-}
-
-.delay {
-  animation-delay: 0.5s;
-}
-
-.delay2 {
-  animation-delay: 1s;
+.cta-button:hover {
+    background-color: #0061f2;
+    color: white;
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: #333;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Call-to-Action Section */
+.cta {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #333;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
