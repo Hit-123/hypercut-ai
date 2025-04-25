@@ -2,119 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HypeCut - AI Video Editor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Outfit', sans-serif;
-    }
-    body {
-      background-color: #0e0e0e;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      background: linear-gradient(90deg, #ffdd00, #ff00d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeIn 1s ease-in-out;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: #ccc;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .cta {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      background: #ff00d4;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-      animation: popIn 1.4s ease-in-out;
-    }
-    .cta:hover {
-      background: #ff55e0;
-    }
-    .features, .demo {
-      padding: 4rem 2rem;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .features h3, .demo h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .features p, .demo p {
-      color: #bbb;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .email-box {
-      text-align: center;
-      margin-top: 2rem;
-      animation: fadeIn 2.2s ease-in-out;
-    }
-    input[type=email] {
-      padding: 0.8rem;
-      border-radius: 10px;
-      border: none;
-      width: 300px;
-      max-width: 80%;
-      margin-right: 1rem;
-    }
-    button.signup {
-      padding: 0.8rem 1.5rem;
-      border-radius: 10px;
-      background: #00ffc3;
-      border: none;
-      color: #000;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes popIn {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hypecut - AI Video Editing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>HypeCut</h1>
-    <h2>Turn Long Videos into Viral Shorts — Instantly with AI</h2>
-    <button class="cta">Join the Waitlist</button>
-  </header>
-
-  <section class="demo">
-    <h3>How It Works</h3>
-    <p>Upload your video, and HypeCut automatically detects the best parts, adds trending effects, captions, and formats it for TikTok, Reels & Shorts.</p>
+  <section class="hero">
+    <div class="container">
+      <h1 class="fade-in">🎬 Welcome to <span>Hypecut</span></h1>
+      <p class="fade-in delay">AI-Powered Video Editing — Cut, Transcribe, and Share in Seconds.</p>
+      <a href="#waitlist" class="btn fade-in delay2">Join the Waitlist</a>
+    </div>
   </section>
 
-  <section class="features">
-    <h3>Key Features</h3>
-    <p>• Auto-clip detection using AI<br />• Auto-captions & viral transitions<br />• Music suggestions + instant export<br />• 3 Free Edits/Month — Upgrade for Unlimited</p>
+  <section class="features" id="waitlist">
+    <h2>🚀 What Hypecut Can Do</h2>
+    <ul>
+      <li>🎤 Transcribe your videos with AI</li>
+      <li>✂️ Cut boring parts automatically</li>
+      <li>📤 Export fast and easy</li>
+    </ul>
+    <form class="signup-form">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Notify Me</button>
+    </form>
   </section>
 
-  <div class="email-box">
-    <input type="email" placeholder="Enter your email" />
-    <button class="signup">Notify Me</button>
-  </div>
+  <footer>
+    <p>© 2025 Hypecut. All rights reserved.</p>
+  </footer>
 </body>
 </html>
