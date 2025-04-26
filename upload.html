@@ -21,11 +21,40 @@
     <div class="hero-content">
       <h1>📋 Paste Your Video Link</h1>
       <div class="upload-box">
-        <input type="text" class="upload-input" placeholder="Paste your video link here..." />
-        <button class="upload-button">Upload</button>
+        <input type="text" id="videoLink" class="upload-input" placeholder="Paste your video link here..." />
+        <button id="uploadButton" class="upload-button">Upload</button>
       </div>
     </div>
   </section>
+
+  <!-- Cloudinary Widget -->
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+  <script>
+    // Replace with your actual Cloud Name and Upload Preset
+    const cloudName = 'drqtdb0hz';
+    const uploadPreset = 'hypecut';
+
+    // Initialize the Cloudinary Upload Widget
+    const widget = cloudinary.createUploadWidget({
+      cloudName: cloudName,
+      uploadPreset: uploadPreset,
+      sources: ['url'],        // allow URL uploads
+      multiple: false,
+      clientAllowedFormats: ['mp4','mov','avi','mkv'],
+      maxFileSize: 50000000    // 50 MB
+    }, (error, result) => {
+      if (!error && result && result.event === "success") {
+        console.log('Upload Success! URL:', result.info.secure_url);
+        alert('Video link uploaded successfully!\n' + result.info.secure_url);
+      }
+    });
+
+    // Open widget when button is clicked
+    document.getElementById('uploadButton').addEventListener('click', function(e) {
+      e.preventDefault();
+      widget.open();
+    }, false);
+  </script>
 
 </body>
 </html>
