@@ -41,6 +41,14 @@
     </div>
   </section>
 
+  <!-- Video Upload Section -->
+  <section class="upload-section" id="upload-section">
+    <h2>Upload Your Video</h2>
+    <input type="file" id="file-input" />
+    <button id="upload-button">Upload</button>
+    <p id="upload-status"></p>
+  </section>
+
   <!-- CTA -->
   <section id="cta" class="cta">
     <h2>⚡ Get Noticed. Get Clicks. Get Hypecut.</h2>
@@ -52,5 +60,39 @@
   <footer>
     <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for File Upload -->
+  <script>
+    document.getElementById("upload-button").addEventListener("click", function() {
+      const fileInput = document.getElementById("file-input");
+      const statusText = document.getElementById("upload-status");
+      
+      if (!fileInput.files.length) {
+        statusText.innerText = "Please select a file.";
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "your-upload-preset"); // Replace with your Cloudinary preset
+
+      statusText.innerText = "Uploading...";
+
+      fetch("https://api.cloudinary.com/v1_1/your-cloud-name/video/upload", {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        statusText.innerText = "Upload successful!";
+        console.log("Uploaded Video URL:", data.secure_url);
+      })
+      .catch(error => {
+        statusText.innerText = "Error uploading video.";
+        console.error("Upload Error:", error);
+      });
+    });
+  </script>
 </body>
 </html>
