@@ -175,73 +175,48 @@ footer {
   .hero h1 { font-size: 2.2rem; }
   .logo { font-size: 2rem; }
 }  
-/* 1. Floating Icons */
-.float-icon {
-  position: absolute;
-  font-size: 1.2rem;
-  opacity: 0.15;
-  bottom: -40px;
-  left: calc(100vw * var(--i) / 25);
-  animation: riseIcon 12s linear infinite;
+/* Neon Grid */
+.neon-grid {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+  animation: moveGrid 30s linear infinite;
+  pointer-events: none;
 }
 
-@keyframes riseIcon {
-  0%   { transform: translateY(0) scale(0.8); opacity: 0; }
-  50%  { opacity: 0.2; }
-  100% { transform: translateY(-100vh) scale(1.1); opacity: 0; }
+@keyframes moveGrid {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 120px 60px, 60px 120px; }
 }
 
-/* 2. Gentle Upload Button Glow on Hover */
-.upload-button {
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-.speed-lines {
+/* Spark Rain */
+.spark-rain {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  overflow: hidden;
   z-index: 0;
+  overflow: hidden;
   pointer-events: none;
 }
-.speed-lines span {
+.spark {
   position: absolute;
-  width: 2px;
-  height: 80px;
-  background: linear-gradient(white, transparent);
-  opacity: 0.2;
-  animation: speedMove 2s linear infinite;
-  top: calc(100% * var(--i));
-  left: calc(100vw * var(--j) / 20);
+  width: 2px; height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: fall 5s linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(100vh) scale(1); opacity: 0; }
 }
 
-@keyframes speedMove {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-120vh); }
-}
-
-/* Upload Button New Animation */
-.upload-button {
-  background: linear-gradient(45deg, #ff00cc, #3333ff);
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 40px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  animation: bounceUpload 2.5s infinite ease-in-out;
-}
-
-.upload-button:hover {
-  transform: scale(1.08);
-}
-
-@keyframes bounceUpload {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.upload-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+/* Bubble Up (already exists but improving it a little) */
+.bubbles span {
+  background: rgba(255,255,255,0.07);
+  animation: rise 20s linear infinite;
 }
