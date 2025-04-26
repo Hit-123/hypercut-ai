@@ -3,29 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Upload Video Link - Hypecut</title>
+  <title>Upload - Hypecut AI</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Animated Background Bubbles -->
+  <!-- Animated Background Layers -->
+  <div class="neon-grid"></div>
+  <div class="spark-rain"></div>
   <div class="bubbles">
-    <span style="--i:11"></span><span style="--i:17"></span><span style="--i:25"></span>
-    <span style="--i:20"></span><span style="--i:10"></span><span style="--i:15"></span>
-    <span style="--i:12"></span><span style="--i:18"></span><span style="--i:14"></span>
-    <span style="--i:22"></span>
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:8;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:22;"></span>
   </div>
 
   <!-- Upload Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>📋 Paste Your Video Link</h1>
-      <div class="upload-box">
-        <input type="text" class="upload-input" placeholder="Paste your video link here..." />
-        <button class="upload-button">Upload</button>
-      </div>
+  <section class="upload">
+    <div class="upload-content">
+      <h1>📤 Upload Your Video Link</h1>
+      <p>Let our AI turn it into a viral short!</p>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" accept="video/*" />
+        <button type="submit" class="upload-button">Upload & Edit</button>
+      </form>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
+  </footer>
+
+  <!-- Spark Rain Script (for background sparks) -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.left = Math.random() * 100 + 'vw';
+      spark.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.querySelector('.spark-rain').appendChild(spark);
+    }
+  </script>
+
+  <!-- Optional: Upload Animation Script -->
+  <script>
+    const uploadButton = document.querySelector('.upload-button');
+    uploadButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      uploadButton.classList.add('loading');
+      setTimeout(() => {
+        uploadButton.classList.remove('loading');
+        alert('Video uploaded and editing started! 🚀');
+      }, 2000);
+    });
+  </script>
 
 </body>
 </html>
