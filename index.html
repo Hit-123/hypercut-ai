@@ -22,7 +22,8 @@
     <div class="hero-content">
       <h1>🎬 Make Catchy Videos in Seconds</h1>
       <p>AI that edits, titles, and cuts — so you go viral faster.</p>
-      <a href="#cta" class="cta-button">Try Hypecut Now</a>
+      <!-- Change this button to open the Cloudinary widget -->
+      <button id="uploadWidgetBtn" class="cta-button">Try Hypecut Now</button>
     </div>
   </section>
 
@@ -60,6 +61,34 @@
   <footer>
     <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
   </footer>
+
+  <!-- Cloudinary Upload Widget -->
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+  <script>
+    // Replace with your Cloudinary details
+    const cloudName = 'drqtdb0hz';
+    const uploadPreset = 'hypecut';
+
+    // Create the widget
+    const widget = cloudinary.createUploadWidget({
+      cloudName: cloudName,
+      uploadPreset: uploadPreset,
+      sources: ['local','url'],
+      multiple: false,
+      clientAllowedFormats: ['mp4','mov','avi','mkv'],
+      maxFileSize: 50000000
+    }, (error, result) => {
+      if (!error && result && result.event === "success") {
+        console.log('Upload Success! URL:', result.info.secure_url);
+        alert('Video uploaded!\n' + result.info.secure_url);
+      }
+    });
+
+    // Open widget on button click
+    document.getElementById('uploadWidgetBtn').addEventListener('click', function() {
+      widget.open();
+    }, false);
+  </script>
 
 </body>
 </html>
