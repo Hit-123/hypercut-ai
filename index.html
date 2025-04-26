@@ -2,34 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auto-Cut Video - Hypecut</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hypecut AI - Make Catchy Videos Fast</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Floating Bubbles -->
+
+  <!-- Animated Background Bubbles -->
   <div class="bubbles">
-    <span style="--i:1"></span><span style="--i:3"></span><span style="--i:5"></span>
-    <span style="--i:7"></span><span style="--i:9"></span><span style="--i:11"></span>
-    <span style="--i:13"></span><span style="--i:15"></span><span style="--i:17"></span>
-    <span style="--i:19"></span>
+    <span style="--i:11"></span>
+    <span style="--i:17"></span>
+    <span style="--i:25"></span>
+    <span style="--i:20"></span>
+    <span style="--i:10"></span>
+    <span style="--i:15"></span>
+    <span style="--i:12"></span>
+    <span style="--i:18"></span>
+    <span style="--i:14"></span>
+    <span style="--i:22"></span>
   </div>
 
-  <!-- Hero Section for Upload -->
+  <!-- Hero Section -->
   <section class="hero">
+    <div class="logo">Hypecut</div>
     <div class="hero-content">
-      <h1>✂️ Auto-Cut Your Video Fast</h1>
-      <p>Paste your YouTube link and let Hypecut do the magic!</p>
-      
-      <form id="uploadForm">
-        <input type="url" id="youtubeLink" placeholder="Paste YouTube Link Here" required
-          style="padding: 15px; width: 80%; max-width: 500px; border-radius: 30px; border: none; margin-bottom: 20px;"/>
-        <br>
-        <button type="submit" class="cta-button">Upload Video</button>
-      </form>
-
-      <p id="uploadStatus" style="margin-top: 20px; font-size: 1.2rem;"></p>
+      <h1>🎬 Make Catchy Videos in Seconds</h1>
+      <p>AI that edits, titles, and cuts — so you go viral faster.</p>
+      <a href="#cta" class="cta-button">Try Hypecut Now</a>
     </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>🔥 What You Get</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>🧠 Viral Titles & Hooks</h3>
+        <p>Our AI writes powerful titles and intros to boost watch time.</p>
+      </div>
+      <div class="card">
+        <h3>✂️ Auto-Cuts That Slap</h3>
+        <p>No more boring intros. Get fast-paced edits that keep attention.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Styles That Stand Out</h3>
+        <p>Pick trendy templates. Hypecut makes it look 🔥 — every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta">
+    <h2>⚡ Get Noticed. Get Clicks. Get Hypecut.</h2>
+    <p>Join thousands of creators making better content in half the time.</p>
+    <a href="#" class="cta-button">Join the Waitlist</a>
   </section>
 
   <!-- Footer -->
@@ -37,20 +63,5 @@
     <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
   </footer>
 
-  <script>
-    const form = document.getElementById('uploadForm');
-    const status = document.getElementById('uploadStatus');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const link = document.getElementById('youtubeLink').value;
-      
-      // You can replace this part with real upload logic later
-      status.innerHTML = "🎉 Link received! Processing your video...";
-      status.style.color = "#00e5ff";
-      
-      // Fake loading animation or success response can go here
-    });
-  </script>
 </body>
 </html>
