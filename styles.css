@@ -175,75 +175,28 @@ footer {
   .hero h1 { font-size: 2.2rem; }
   .logo { font-size: 2rem; }
 }  
-/* 1. Shimmer on Hero Title */
-.hero h1 {
-  position: relative;           /* ensure pseudo-element is contained */
-  overflow: hidden;             /* hide overflow of shimmer */
-}
-.hero h1::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.3),
-    transparent
-  );
-  transform: skewX(-20deg);
-  animation: shimmer 3s infinite;
-}
-@keyframes shimmer {
-  0%   { left: -100%; }
-  50%  { left: 100%; }
-  100% { left: 100%; }
-}
-
-/* 2. Pulse Glow on Feature Cards */
-@keyframes pulseGlow {
-  0%,100% { box-shadow: 0 0 15px #00000088; }
-  50%     { box-shadow: 0 0 30px rgba(255,204,0,0.8); }
-}
-.card {
-  animation: pulseGlow 5s ease-in-out infinite;
-}
-
-/* 3. Button Jiggle on Hover */
-@keyframes jiggle {
-  0%,100% { transform: translateX(0); }
-  25%     { transform: translateX(-3px); }
-  75%     { transform: translateX(3px); }
-}
-.cta-button:hover,
-.upload-button:hover {
-  animation: jiggle 0.6s ease;
-}
-
-/* 4. Pop-in Upload Box */
-.upload-box {
-  opacity: 0;
-  transform: scale(0.9);
-  animation: popIn 0.6s ease-out forwards 0.5s;
-}
-@keyframes popIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* 5. Floating Icons (if you add <span class="float-icon">🎥</span>) */
+/* 1. Floating Icons */
 .float-icon {
   position: absolute;
-  font-size: 1.5rem;
-  opacity: 0.2;
-  bottom: -50px;
+  font-size: 1.2rem;
+  opacity: 0.15;
+  bottom: -40px;
   left: calc(100vw * var(--i) / 25);
-  animation: riseIcon 15s linear infinite;
+  animation: riseIcon 12s linear infinite;
 }
+
 @keyframes riseIcon {
-  0%   { transform: translateY(0) scale(0.5); opacity: 0; }
-  50%  { opacity: 0.4; }
-  100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+  0%   { transform: translateY(0) scale(0.8); opacity: 0; }
+  50%  { opacity: 0.2; }
+  100% { transform: translateY(-100vh) scale(1.1); opacity: 0; }
+}
+
+/* 2. Gentle Upload Button Glow on Hover */
+.upload-button {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.upload-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
 }
