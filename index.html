@@ -8,8 +8,7 @@
 </head>
 <body>
 
-  <!-- Animated Background Bubbles -->
-  <div class="bubbles">
+  <!-- Animated Background Layers -->
   <div class="neon-grid"></div>
   <div class="spark-rain"></div>
   <div class="bubbles">
@@ -23,31 +22,16 @@
     <span style="--i:8;"></span>
     <span style="--i:9;"></span>
     <span style="--i:10;"></span>
-    <span style="--i:11"></span><span style="--i:17"></span><span style="--i:25"></span>
-    <span style="--i:20"></span><span style="--i:10"></span><span style="--i:15"></span>
-    <span style="--i:12"></span><span style="--i:18"></span><span style="--i:14"></span>
-    <span style="--i:22"></span>
-    <script>
-    for(let i=0; i<40; i++) {
-      const spark = document.createElement('div');
-      spark.className = 'spark';
-      spark.style.left = Math.random() * 100 + 'vw';
-      spark.style.animationDuration = (2 + Math.random() * 3) + 's';
-      document.querySelector('.spark-rain').appendChild(spark);
-    }
-  </script>
+    <span style="--i:11;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:22;"></span>
   </div>
-  
- <script>
-  for(let i=0; i<40; i++) {
-    const spark = document.createElement('div');
-    spark.className = 'spark';
-    spark.style.left = Math.random() * 100 + 'vw';
-    spark.style.animationDuration = (2 + Math.random() * 3) + 's';
-    document.querySelector('.spark-rain').appendChild(spark);
-  }
-</script>
-
 
   <!-- Hero Section -->
   <section class="hero">
@@ -59,7 +43,7 @@
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Features Section -->
   <section class="features">
     <h2>🔥 What You Get</h2>
     <div class="feature-cards">
@@ -82,7 +66,7 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Call to Action -->
   <section id="cta" class="cta">
     <h2>⚡ Get Noticed. Get Clicks. Get Hypecut.</h2>
     <p>Join thousands of creators making better content in half the time.</p>
@@ -93,6 +77,17 @@
   <footer>
     <p>&copy; 2025 Hypecut AI. All rights reserved.</p>
   </footer>
+
+  <!-- Spark Rain Script (for background sparks) -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.left = Math.random() * 100 + 'vw';
+      spark.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.querySelector('.spark-rain').appendChild(spark);
+    }
+  </script>
 
 </body>
 </html>
