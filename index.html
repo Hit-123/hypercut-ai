@@ -10,16 +10,43 @@
 
   <!-- Animated Background Bubbles -->
   <div class="bubbles">
+  <div class="neon-grid"></div>
+  <div class="spark-rain"></div>
+  <div class="bubbles">
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:8;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:10;"></span>
     <span style="--i:11"></span><span style="--i:17"></span><span style="--i:25"></span>
     <span style="--i:20"></span><span style="--i:10"></span><span style="--i:15"></span>
     <span style="--i:12"></span><span style="--i:18"></span><span style="--i:14"></span>
     <span style="--i:22"></span>
-    <span class="float-icon" style="--i:5">🎥</span>
-    <span class="float-icon" style="--i:15">✂️</span>
-
+    <script>
+    for(let i=0; i<40; i++) {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.left = Math.random() * 100 + 'vw';
+      spark.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.querySelector('.spark-rain').appendChild(spark);
+    }
+  </script>
   </div>
   
- 
+ <script>
+  for(let i=0; i<40; i++) {
+    const spark = document.createElement('div');
+    spark.className = 'spark';
+    spark.style.left = Math.random() * 100 + 'vw';
+    spark.style.animationDuration = (2 + Math.random() * 3) + 's';
+    document.querySelector('.spark-rain').appendChild(spark);
+  }
+</script>
 
 
   <!-- Hero Section -->
