@@ -63,7 +63,7 @@ p {
   text-shadow: 0 0 10px #ff00cc, 0 0 20px #3300ff;
   margin-bottom: 30px;
   animation: pulse 3s ease-in-out infinite;
-}
+}   
 @keyframes pulse {
   0% { text-shadow: 0 0 5px #ff00cc, 0 0 10px #3300ff; }
  50% { text-shadow: 0 0 20px #ff00cc, 0 0 40px #3300ff; }
@@ -174,49 +174,4 @@ footer {
   .card { width: 90%; }
   .hero h1 { font-size: 2.2rem; }
   .logo { font-size: 2rem; }
-}  
-/* Neon Grid */
-.neon-grid {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  z-index: 0;
-  animation: moveGrid 30s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes moveGrid {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 120px 60px, 60px 120px; }
-}
-
-/* Spark Rain */
-.spark-rain {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.spark {
-  position: absolute;
-  width: 2px; height: 10px;
-  background: rgba(255, 255, 255, 0.4);
-  animation: fall 5s linear infinite;
-}
-@keyframes fall {
-  0% { transform: translateY(0) scale(0.5); opacity: 0; }
-  50% { opacity: 0.8; }
-  100% { transform: translateY(100vh) scale(1); opacity: 0; }
-}
-
-/* Bubble Up (already exists but improving it a little) */
-.bubbles span {
-  background: rgba(255,255,255,0.07);
-  animation: rise 20s linear infinite;
-}
+}   
