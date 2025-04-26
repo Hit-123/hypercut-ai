@@ -139,3 +139,23 @@ footer {
   padding: 20px;
   text-align: center;
 }
+.upload-section {
+  text-align: center;
+  margin-top: 120px;
+}
+.upload-section input[type="url"] {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.upload-section .cta-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
